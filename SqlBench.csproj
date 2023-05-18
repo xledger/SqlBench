@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Title>SqlBench</Title>
+    <PackageProjectUrl>https://github.com/xledger/SqlBench</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git@github.com:xledger/SqlBench.git</RepositoryUrl>
+    <PackageTags>sql server; benchmark</PackageTags>
+    <PackAsTool>True</PackAsTool>
+    <Description>A console tool for benchmarking sql.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestToml\**" />
+    <EmbeddedResource Remove="TestToml\**" />
+    <None Remove="TestToml\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonDiffPatch.Net" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Spectre.Console" Version="0.46.0" />
+    <PackageReference Include="Spectre.Console.Cli" Version="0.46.0" />
+    <PackageReference Include="Spectre.Console.Json" Version="0.46.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Tomlyn" Version="0.16.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
