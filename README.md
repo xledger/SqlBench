@@ -7,7 +7,7 @@ A console tool for benchmarking sql.
 # Installation
 
 ```powershell
-dotnet tool install --global SqlBench --version 1.0.0
+dotnet tool install --global SqlBench --version 1.0.1
 ```
 
 # Usage
@@ -17,7 +17,7 @@ mkdir sql_benchmarks
 cd sql_benchmarks
 sqlbench init
 
-# Edit Config.toml, providing your ConnectionString
+# Edit Config.toml, set your connection_string
 # Edit BenchCases.toml, add SQL you want to test
 
 sqlbench bench BenchCases.toml
